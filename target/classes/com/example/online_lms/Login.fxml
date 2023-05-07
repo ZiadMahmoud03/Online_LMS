@@ -5,39 +5,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #231F20;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.online_lms.Main">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="700.0" style="-fx-background-color: #231F20;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.online_lms.Main">
     <children>
-        <ImageView fitHeight="400.0" fitWidth="500.0" layoutY="-2.0" pickOnBounds="true">
-            <image>
-                <Image url="@img.png" />
-            </image>
-            <effect>
-                <Lighting bumpInput="$null" light="$null" />
-            </effect>
-        </ImageView>
-        <Pane fx:id="login_pane" layoutX="145.0" layoutY="54.0" prefHeight="293.0" prefWidth="225.0" style="-fx-background-color: white;">
+        <Pane fx:id="login_pane" prefHeight="474.0" prefWidth="305.0" style="-fx-background-color: #2d3250;">
             <children>
-                <ComboBox fx:id="type" layoutX="38.0" layoutY="36.0" prefWidth="150.0" promptText="User Type" />
-                <TextField fx:id="userName" layoutX="39.0" layoutY="106.0" promptText="UserName" />
-                <Button fx:id="login_btn" layoutX="38.0" layoutY="229.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="149.0" stylesheets="@Buttons.css" text="Login" textFill="WHITE">
+                <ComboBox fx:id="type" layoutX="60.0" layoutY="419.0" prefWidth="150.0" promptText="User Type" style="-fx-background-color: #676f8d;" />
+                <TextField fx:id="userName" layoutX="42.0" layoutY="104.0" prefHeight="39.0" prefWidth="186.0" promptText="UserName" style="-fx-background-color: #676f8d;" />
+                <Button fx:id="login_btn" layoutX="51.0" layoutY="346.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" stylesheets="@Buttons.css" text="Login" textFill="WHITE">
                     <font>
                         <Font name="Times New Roman Italic" size="15.0" />
                     </font></Button>
-                <Label layoutX="38.0" layoutY="83.0" text="UserName:" />
-                <Label layoutX="39.0" layoutY="147.0" text="Password:" />
-                <PasswordField fx:id="password" layoutX="38.0" layoutY="164.0" promptText="Password" />
-                <Button fx:id="registerAcc" layoutX="43.0" layoutY="257.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Don't have an account?" textFill="#0e92c6">
+                <PasswordField fx:id="password" layoutX="42.0" layoutY="218.0" prefHeight="39.0" prefWidth="186.0" promptText="Password" style="-fx-background-color: #676f8d;" />
+                <Button fx:id="registerAcc" layoutX="66.0" layoutY="385.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Don't have an account?" textFill="WHITE">
                     <font>
                         <Font name="System Italic" size="12.0" />
                     </font>
                 </Button>
+            <Text fill="#fffefe" layoutX="61.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LMS" textAlignment="CENTER" wrappingWidth="148.5078125">
+               <font>
+                  <Font name="Romantic" size="35.0" />
+               </font>
+            </Text>
             </children>
         </Pane>
         <Pane fx:id="createAcc_pane" layoutX="145.0" layoutY="54.0" prefHeight="293.0" prefWidth="225.0" style="-fx-background-color: white;" visible="false">
@@ -75,5 +70,10 @@
                 </Button>
             </children>
         </Pane>
+      <ImageView fitHeight="474.0" fitWidth="396.0" layoutX="304.0" pickOnBounds="true">
+         <image>
+            <Image url="@img_2.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

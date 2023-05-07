@@ -82,8 +82,37 @@ public class Main extends Application implements Initializable {
     @FXML
     private TextField userName;
 
+    String[] items = new String[]{"Instructor", "Student"};
+
     public static void main(String[] args) {
         launch();
+    }
+
+    @FXML
+    private void login(ActionEvent event) throws IOException {
+
+        try {
+            if (((String) this.type.getValue()).equals("Student")) {
+                Stage stage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("Student.fxml"));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root);
+                stage.centerOnScreen();
+                stage.setScene(scene);
+                stage.show();
+            } else if (((String) this.type.getValue()).equals("Instructor")) {
+                Stage stage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("Instructor.fxml"));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root);
+                stage.centerOnScreen();
+                stage.setScene(scene);
+                stage.show();
+            }
+        } catch(Exception exception) {
+            exception.printStackTrace();
+            System.out.println(exception.getCause());
+        }
     }
 
     @Override
@@ -107,6 +136,10 @@ public class Main extends Application implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.type.getItems().addAll(this.items);
+    }
 
+    public void getItems(ActionEvent e) {
+        String items = (String)this.type.getValue();
     }
 }
