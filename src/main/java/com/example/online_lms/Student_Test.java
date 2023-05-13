@@ -11,7 +11,7 @@ public class Student_Test {
 	@Test
 	public void test() {
 
-		System.out.println("FUCK IT");
+		System.out.println("Test Successed");
 		
 		String str="Hey";
 		
