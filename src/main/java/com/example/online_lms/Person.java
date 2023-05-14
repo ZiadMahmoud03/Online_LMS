@@ -19,6 +19,18 @@ public class Person {
 
     List<String> Courses;
 
+    public Person(String firstName, String lastName, String phoneNumber, String email, String gender, String address, String dob, String department, Long nationalId, List<String> courses) {
+        FirstName = firstName;
+        LastName = lastName;
+        PhoneNumber = phoneNumber;
+        this.email = email;
+        this.gender = gender;
+        this.address = address;
+        this.dob = dob;
+        this.department = department;
+        NationalId = nationalId;
+        Courses = courses;
+    }
 
     public String getFirstName() {
         return FirstName;
