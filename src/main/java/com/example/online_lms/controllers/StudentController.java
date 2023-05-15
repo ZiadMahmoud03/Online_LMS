@@ -1,4 +1,4 @@
-package com.example.online_lms;
+package com.example.online_lms.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
